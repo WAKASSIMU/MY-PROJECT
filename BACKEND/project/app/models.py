@@ -11,7 +11,7 @@ class Chairperson(models.Model):
     name = models.CharField(max_length=20)
     age = models.IntegerField()
     phone_number = models.IntegerField()
-    address = models.CharField(max_length=100)
+    address = models.CharField(max_length=200)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
 
 
