@@ -19,7 +19,7 @@ class Chairperson(models.Model):
         return f"{self.name}"
     
 class Street(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=300)
     code = models.IntegerField(null=True, blank=True)
     pop = models.IntegerField()
     chairperson = models.OneToOneField(Chairperson, on_delete=models.CASCADE)
@@ -28,5 +28,5 @@ class Street(models.Model):
         return f"{self.name}"
     
 class Patient(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=1300)
     street = models.ForeignKey(Street, on_delete=models.CASCADE)
